@@ -1,0 +1,29 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+       "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+       "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.PostgreSQLDialect
+        </property>
+        <property name="hibernate.connection.driver_class">
+            org.postgresql.Driver
+        </property>
+        <property name="hibernate.connection.url">
+            jdbc:postgresql://revaturebitadb.ceji3tsumxwv.us-east-2.rds.amazonaws.com:5432/rev1808bitadb?
+            
+        </property>
+        <property name="hibernate.connection.username">
+            bita
+        </property>
+        <property name="hibernate.connection.password">
+           revature
+        </property>
+        
+        <property name="hibernate.show_sql">true</property>
+        
+        <!-- <mapping resource="user.hbm.xml"/>-->
+        <mapping class="com.revature.pojo.User"/>
+         <mapping class="com.revature.pojo.Vehicle"/>
+    </session-factory>
+</hibernate-configuration>
